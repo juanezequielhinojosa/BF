@@ -734,7 +734,7 @@ filter: invert(90%) hue-rotate(180deg) contrast(90%);
 
 .whatsapp-float {
   position: fixed;
-  bottom: 20px;
+  bottom: 90px;
   right: 20px;
   width: 60px;
   height: 60px;
