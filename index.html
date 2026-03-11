@@ -534,6 +534,222 @@ color:#3b1d0f;
 font-size:14px;
 color:#666;
 }
+
+/* ========================= */
+/* CONTACTO */
+/* ========================= */
+
+.contacto{
+background:white;
+/*background:#111;*/
+padding:80px 60px;
+color:white;
+text-align: center;
+}
+
+/*.contacto-container{
+display:flex;
+gap:50px;
+flex-wrap:wrap;
+}*/
+.contacto-container{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+}
+.contacto-info{
+flex:1;
+
+}
+
+.contacto-info p{
+margin:10px 0;
+/*color:#ccc;*/
+color:#666;
+}
+
+.contacto-texto{
+margin-bottom:20px;
+color:#666;
+font-size:17px;
+line-height:1.5;
+}
+.contacto-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.whatsapp{
+display:inline-block;
+margin-top:20px;
+background:#25D366;
+padding:12px 24px;
+color:white;
+text-decoration:none;
+border-radius:6px;
+transition:0.3s;
+}
+
+.whatsapp:hover{
+background:#1ebe5d;
+}
+
+/* ========================= */
+/* FORMULARIO CONTACTO */
+/* ========================= */
+
+.contacto-form{
+flex:1;
+display:flex;
+align-items:center;
+}
+
+/* caja del formulario */
+
+.contacto-form form{
+display:flex;
+flex-direction:column;
+gap:15px;
+width:100%;
+background:#1a1a1a;
+padding:35px;
+border-radius:10px;
+box-shadow:0 15px 40px rgba(0,0,0,0.6);
+}
+
+/* inputs */
+
+.contacto-form input,
+.contacto-form textarea{
+padding:14px;
+border:none;
+outline:none;
+background:#222;
+color:white;
+border-radius:6px;
+font-size:14px;
+transition:all 0.3s ease;
+}
+
+/* placeholder */
+
+.contacto-form input::placeholder,
+.contacto-form textarea::placeholder{
+color:#888;
+}
+
+/* focus */
+
+.contacto-form input:focus,
+.contacto-form textarea:focus{
+background:#2a2a2a;
+box-shadow:0 0 0 2px #c8a25a;
+}
+
+/* textarea */
+
+.contacto-form textarea{
+min-height:120px;
+resize:none;
+}
+
+/* boton */
+
+.contacto-form button{
+background:#c8a25a;
+color:white;
+border:none;
+padding:14px;
+cursor:pointer;
+font-weight:600;
+letter-spacing:1px;
+border-radius:6px;
+transition:all 0.3s ease;
+}
+
+.contacto-form button:hover{
+background:#a38349;
+transform:translateY(-2px);
+box-shadow:0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+.footer{
+/*background:#2b0603;*/
+background:#111;
+padding:60px 60px 30px;
+color:white;
+}
+
+.footer-container{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+align-items:start;
+}
+
+/* columna */
+
+.footer-col h3{
+color:#c8a25a;
+margin-bottom:15px;
+letter-spacing:2px;
+}
+
+.footer-col p{
+color:#ccc;
+margin-bottom:8px;
+}
+
+/* redes */
+
+.footer-redes a{
+display:block;
+color:#ccc;
+text-decoration:none;
+margin-bottom:8px;
+transition:.3s;
+}
+
+.footer-redes a:hover{
+color:#c8a25a;
+}
+
+.footer-redes i{
+margin-right:8px;
+}
+
+/* mapa */
+.mapa iframe{
+width:100%;
+height:300px;
+border:0;
+border-radius:8px;
+}
+
+/* copyright */
+
+.footer-copy{
+text-align:center;
+margin-top:40px;
+border-top:1px solid rgba(255,255,255,0.1);
+padding-top:20px;
+color:#aaa;
+font-size:14px;
+}
+
+.footer-mapa iframe{
+width:100%;
+height:200px;
+border:0;
+border-radius:6px;
+filter: invert(90%) hue-rotate(180deg) contrast(90%);
+}
+
 /* ======== GRID SERVICIOS ======== */
 @media (max-width:900px){
   .servicios-grid{
@@ -551,6 +767,14 @@ color:#666;
   .productos-grid{
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .contacto-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-container{
+  grid-template-columns:1fr 1fr;
+}
 }
 
 @media (max-width:500px){
@@ -573,6 +797,15 @@ color:#666;
   .productos-grid{
     grid-template-columns: 1fr;
   }
+
+  .contacto-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .footer-container{
+    grid-template-columns:1fr;
+    text-align:center;
+}
 }
 
 /* ===== MENU MOBILE UNIFICADO ===== */
@@ -906,6 +1139,113 @@ Productos profesionales recomendados por nuestros barberos
 </div>
 
 </section>
+
+<!-- CONTACTO -->
+<section class="contacto" id="contacto">
+
+<div class="titulo-servicios">
+<span>CONTÁCTANOS</span>
+<h2>CONTACTO</h2>
+</div>
+
+<div class="contacto-grid">
+
+<!-- FORMULARIO -->
+
+<div class="contacto-form reveal-right">
+
+<form>
+
+<input type="text" placeholder="Nombre" required>
+
+<input type="email" placeholder="Email" required>
+
+<textarea placeholder="Mensaje" rows="5" required></textarea>
+
+<button type="submit">Enviar Mensaje</button>
+
+</form>
+
+</div>
+
+<!-- INFO -->
+
+<div class="contacto-info reveal-left">
+<p class="contacto-texto">
+<strong>Contáctanos y agenda tu próximo estilo !!!</strong>
+</p>
+<p><strong>Dirección:</strong> Av. Principal 123</p>
+<p><strong>Teléfono:</strong> +54 11 5555 5555</p>
+<p><strong>Horario:</strong> Lun - Sáb 9:00 a 20:00</p>
+
+<a href="https://wa.me/5491155555555" class="whatsapp">
+Contactar por WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer reveal-zoom">
+
+<div class="footer-container">
+
+<!-- DIRECCION -->
+
+<div class="footer-col">
+
+<h3>CONTACTO</h3>
+
+<p><strong>Dirección:</strong> Av. Principal 123</p>
+<p><strong>Teléfono:</strong> +54 11 5555 5555</p>
+<p><strong>Horario:</strong></p>
+<p>Lunes a Sábado</p>
+<p>9:00 a 20:00</p>
+
+</div>
+
+
+<!-- REDES -->
+
+<div class="footer-col footer-redes">
+
+<h3>NUESTRAS REDES</h3>
+
+<div class="footer-redes">
+
+<a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+<a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+<a href="#"><i class="fab fa-x-twitter"></i> Twitter</a>
+<a href="#"><i class="fab fa-tiktok"></i> TikTok</a>
+
+</div>
+</div>
+
+
+<!-- MAPA -->
+
+<div class="footer-col footer-mapa">
+
+<h3>UBICACIÓN</h3>
+<iframe
+src="https://www.google.com/maps?q=buenos%20aires&output=embed"
+style="filter: invert(90%) hue-rotate(180deg);"
+></iframe>
+
+</div>
+
+</div>
+
+
+<div class="footer-copy">
+© 2026 Barbería Premium — Todos los derechos reservados
+</div>
+
+</footer>
 </body>
 
 <script>
