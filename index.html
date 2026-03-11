@@ -376,9 +376,110 @@ font-size:16px;
 letter-spacing:2px;
 font-weight:500;
 }
+
+/* ========================= */
+/* TRABAJOS */
+/* ========================= */
+
+.trabajos{
+background:#111;
+padding:80px 60px;
+}
+
+.trabajos-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.trabajo img{
+width:100%;
+height:260px;
+object-fit:cover;
+transition:.4s;
+}
+
+.trabajo:hover img{
+transform:scale(1.1);
+}
+
+/* ========================= */
+/* SECCION NOSOTROS */
+/* ========================= */
+
+.nosotros{
+background:#111;
+padding:80px 10%;
+}
+
+.nosotros-container{
+display:flex;
+align-items:center;
+gap:50px;
+flex-wrap:wrap;
+}
+
+.nosotros-img{
+flex:1;
+overflow:hidden;
+}
+
+.nosotros-img img{
+width:100%;
+border-radius:10px;
+transition:0.5s;
+}
+
+.nosotros-img:hover img{
+transform:scale(1.05);
+}
+
+.nosotros-texto{
+flex:1;
+color:white;
+}
+
+.nosotros-texto h3{
+font-size:32px;
+margin-bottom:20px;
+}
+
+.nosotros-texto p{
+margin-bottom:15px;
+line-height:1.6;
+color:#ccc;
+}
+
+.btn-reservar{
+display:inline-block;
+margin-top:20px;
+padding:12px 28px;
+background:#c59d5f;
+color:white;
+text-decoration:none;
+border-radius:5px;
+transition:0.3s;
+}
+
+.btn-reservar:hover{
+background:#a67c3d;
+}
+.nosotros-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
 /* ======== GRID SERVICIOS ======== */
 @media (max-width:900px){
   .servicios-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trabajos-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nosotros-grid{
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -390,6 +491,14 @@ font-weight:500;
 
   .titulo-servicios h2{
     font-size: 36px;
+  }
+
+  .trabajos-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .nosotros-grid{
+    grid-template-columns: 1fr;
   }
 }
 
@@ -528,9 +637,9 @@ font-weight:500;
 
 <a href="#">HOME</a>
 <a href="#servicios">SERVICIOS</a>
-<a href="#">TRABAJOS</a>
+<a href="#trabajos">TRABAJOS</a>
 <a href="#" class="btn btn-desktop">RESERVAR TURNO</a>
-<a href="#">NOSOTROS</a>
+<a href="#nosotros">NOSOTROS</a>
 <a href="#">PRODUCTOS</a>
 <a href="#">CONTACTO</a>
 
@@ -584,6 +693,71 @@ font-weight:500;
 <div class="servicio">
 <img src="img/peinados.avif">
 <div class="servicio-titulo">PEINADOS</div>
+</div>
+
+</div>
+
+</section>
+<!-- TRABAJOS -->
+
+<section class="trabajos reveal-right" id="trabajos">
+
+<div class="titulo-servicios">
+<span>NUESTROS</span>
+<h2>TRABAJOS</h2>
+</div>
+
+<div class="trabajos-grid">
+
+<div class="trabajo"><img src="img/t1.avif"></div>
+<div class="trabajo"><img src="img/t2.avif"></div>
+<div class="trabajo"><img src="img/t3.avif"></div>
+<div class="trabajo"><img src="img/t4.avif"></div>
+<div class="trabajo"><img src="img/t5.avif"></div>
+<div class="trabajo"><img src="img/t6.avif"></div>
+
+</div>
+
+</section>
+
+<!-- NOSOTROS -->
+
+<section class="nosotros" id="nosotros">
+
+<div class="titulo-servicios">
+<span>CONÓCENOS</span>
+<h2>NOSOTROS</h2>
+</div>
+
+<div class="nosotros-container nosotros-grid">
+
+<div class="nosotros-img reveal-right">
+<img src="img/historia.jfif">
+</div>
+
+<div class="nosotros-texto reveal-left">
+
+<h3>Nuestra Historia</h3>
+
+<p>
+En <strong>Barbería Premium</strong> creemos que un buen corte
+es mucho más que estética. Es confianza, personalidad y estilo.
+</p>
+
+<p>
+Contamos con más de <strong>10 años de experiencia</strong>
+ofreciendo servicios profesionales de barbería,
+combinando técnicas clásicas con tendencias modernas.
+</p>
+
+<p>
+Nuestro objetivo es brindar una experiencia única
+donde cada cliente se sienta cómodo, relajado
+y salga con su mejor versión.
+</p>
+
+<a href="#" class="btn-reservar">Reservar Turno</a>
+
 </div>
 
 </div>
