@@ -738,6 +738,32 @@ border-radius:6px;
 filter: invert(90%) hue-rotate(180deg) contrast(90%);
 }
 
+/* BOTÓN FLOTANTE WHATSAPP */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  z-index: 9999;
+  transition: 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background: #1ebe5d;
+}
+
 /* ======== GRID SERVICIOS ======== */
 @media (max-width:900px){
   .servicios-grid{
